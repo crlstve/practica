@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Productos;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/catalogo/', function () {
+    return view('catalogo',[
+        'productos' => Productos::all(),
+    ]);
+});
+
+Route::get('/catalogo/{producto?}', function($slug){
+    return view('producto', [
+        'producto' => Productos::findOrFail($slug)
+    ]);
+});
+
+Route::get('/inicio', function () {
+    return view('home');
 });
