@@ -62,7 +62,4 @@ class Productos{
         return $producto;
 	}
 
-
-
-
 }
