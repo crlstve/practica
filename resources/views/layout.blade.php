@@ -9,11 +9,12 @@
     <header>
         
     </header>
-    @yield('content')
+
+        @yield('content')
 
     <footer>
     
-</footer>
+    </footer>
 </body>
 </html>
 

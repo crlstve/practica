@@ -8,8 +8,6 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Money\Currency;
 use Money\Money;
 
-
-
 class Productos{
 	public $title;
 	public $excerpt;
